@@ -22,19 +22,19 @@ To resolve this issue:
 
 ## Installing
 1. To use these exercise files, you must have the following installed:
-	- [list of requirements for course]
+	- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+    - [VSCode](https://code.visualstudio.com/download)
 2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
+3. Use the included cheatsheet.txt file to copy and paste the commands used in each video into the terminal.
 
 ## Instructor
 
-Instructor name
+Shelley Benhoff is an author, Docker Captain, and co-owner at HoffsTech, LLC.
 
-Instructor description
-
+Shelley has over 25 years of experience in tech as a developer, trainer, author, and speaker. She has a passion for sharing knowledge to support developer success through content creation, publications, and speaking engagements. As a moderator, Shelley has managed several online developer communities to provide a safe space for developers to discuss their learning process, career goals, and challenges.
                             
 
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/shelley-benhoff).
 
 
 [0]: # (Replace these placeholder URLs with actual course URLs)

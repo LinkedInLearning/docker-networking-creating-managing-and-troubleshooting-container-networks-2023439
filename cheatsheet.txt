@@ -1,0 +1,7 @@
+**********************************
+*** 00_02 What You Should Know ***
+**********************************
+
+https://guide.bash.academy
+
+https://github.com/LinkedInLearning/docker-networking-creating-managing-and-troubleshooting-container-networks-2023439.git

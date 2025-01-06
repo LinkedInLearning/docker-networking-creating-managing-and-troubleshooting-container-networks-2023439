@@ -97,3 +97,21 @@ docker run -d --name cache --network custom_bridge redis
 docker run -it --network custom_bridge alpine sh
 
 ping dbserver
+
+******************************************
+*** 03_02 Managing Network Connections ***
+******************************************
+
+docker network create custom_bridge2
+
+docker network connect custom_bridge2 webserver
+
+docker network disconnect custom_bridge2 webserver
+
+docker network ls
+
+docker system prune
+
+docker network rm custom_bridge
+
+docker network ls

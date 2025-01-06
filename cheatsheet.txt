@@ -25,3 +25,9 @@ docker network inspect my_network
 docker network rm my_network
 
 docker network ls
+
+****************************************************
+*** 02_02 Overview of Other Docker Network Types ***
+****************************************************
+
+https://docs.docker.com

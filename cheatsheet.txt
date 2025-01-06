@@ -149,3 +149,67 @@ ping database
 ping app
 
 ping frontend
+
+****************************************************
+*** 04_04 Managing Networks Using Docker Compose ***
+****************************************************
+
+- Docker compose file:
+
+services:
+  app:
+    image: nginx
+    networks:
+      custom_bridge:
+        aliases:
+          - frontend
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+    networks:
+      custom_bridge:
+        aliases:
+          - database
+
+networks:
+  custom_bridge:
+    driver: bridge
+
+-----------------------------------------------------
+
+docker compose up -d
+
+docker network inspect dockernetworking_custom_bridge
+
+-----------------------------------------------------
+- Docker compose file:
+
+name: myapp
+
+services:
+  
+  app:
+    image: nginx
+    networks:
+      custom_bridge:
+        aliases:
+          - frontend
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+    networks:
+      custom_bridge:
+        aliases:
+          - database
+
+networks:
+  custom_bridge:
+    driver: bridge
+
+-----------------------------------------------------
+
+docker compose up -d

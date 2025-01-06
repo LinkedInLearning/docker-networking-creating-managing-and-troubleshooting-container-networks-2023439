@@ -1,0 +1,27 @@
+**********************************
+*** 00_02 What You Should Know ***
+**********************************
+
+https://guide.bash.academy
+
+https://github.com/LinkedInLearning/docker-networking-creating-managing-and-troubleshooting-container-networks-2023439.git
+
+**********************************************
+*** 01_03 Basic Docker Networking Commands ***
+**********************************************
+
+docker network create my_network
+
+docker network ls
+
+docker run --name my_nginx --network my_network -d -p 8080:80 nginx
+
+docker network connect my_network my_nginx
+
+docker network disconnect my_network my_nginx
+
+docker network inspect my_network
+
+docker network rm my_network
+
+docker network ls

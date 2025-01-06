@@ -213,3 +213,27 @@ networks:
 -----------------------------------------------------
 
 docker compose up -d
+
+**************************************************
+*** 05_02 Essential Docker Networking Commands ***
+**************************************************
+
+docker network ls
+
+docker compose up -d
+
+docker network inspect myapp_custom_bridge
+
+docker inspect myapp-app-1
+
+docker network disconnect myapp_custom_bridge myapp-app-1
+
+docker inspect myapp-app-1
+
+docker network connect myapp_custom_bridge myapp-app-1
+
+docker inspect myapp-db-1
+
+docker network prune
+
+docker system prune

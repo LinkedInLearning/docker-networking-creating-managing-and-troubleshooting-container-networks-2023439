@@ -32,6 +32,54 @@ docker network ls
 
 https://docs.docker.com
 
+********************************************
+*** 02_03 Docker Network Types in Action ***
+********************************************
+
+docker run -d --name database -e POSTGRES_PASSWORD=example postgres:latest
+
+docker run -d --name backend -e DATABASE_URL=postgres://database:5432/mydb tiangolo/uwsgi-nginx-flask:python3.8
+
+docker run -d --name frontend -p 8080:80 nginx:latest
+
+docker network ls
+
+docker network inspect bridge
+
+docker swarm init
+
+docker network create --driver overlay my_overlay_net
+
+docker network ls
+
+docker service create --name database --network my_overlay_net --env POSTGRES_PASSWORD=example postgres:latest
+
+docker service create --name backend --network my_overlay_net --env DATABASE_URL=postgres://database:5432/mydb tiangolo/uwsgi-nginx-flask:python3.8
+
+docker service create --name frontend --network my_overlay_net -p 8080:80 nginx:latest
+
+docker network inspect my_overlay_net
+
+docker service rm frontend 
+
+docker service rm backend 
+
+docker service rm database
+
+docker swarm leave --force
+
+docker network create --driver macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 -o parent=eth0 macvlan_network
+
+docker network ls
+
+docker run -d --name db --network macvlan_network --ip 192.168.1.10 --env POSTGRES_PASSWORD=example postgres:latest
+
+docker run -d --name backend --network macvlan_network --ip 192.168.1.20 --env DATABASE_URL=postgres://database:5432/mydb tiangolo/uwsgi-nginx-flask:python3.8
+
+docker network inspect macvlan_network
+
+docker network prune
+
 **********************************************
 *** 03_01 Creating a Custom Bridge Network ***
 **********************************************

@@ -1,0 +1,21 @@
+services:
+  
+  app:
+    image: nginx
+    networks:
+      custom_bridge:
+        aliases:
+          - frontend
+
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+    networks:
+      custom_bridge:
+        aliases:
+          - database
+
+networks:
+  custom_bridge:
+    driver: bridge

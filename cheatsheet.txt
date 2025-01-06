@@ -115,3 +115,17 @@ docker system prune
 docker network rm custom_bridge
 
 docker network ls
+
+******************************************************
+*** 04_01 Using Docker DNS for Container Discovery ***
+******************************************************
+
+docker network create my_network
+
+docker run -d --name app --network my_network nginx  
+
+docker run -d --name db --network my_network --env MYSQL_ROOT_PASSWORD=example mysql 
+
+docker run -it --network my_network alpine sh
+
+ping db

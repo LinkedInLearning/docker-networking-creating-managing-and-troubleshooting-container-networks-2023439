@@ -129,3 +129,23 @@ docker run -d --name db --network my_network --env MYSQL_ROOT_PASSWORD=example m
 docker run -it --network my_network alpine sh
 
 ping db
+
+************************************************
+*** 04_03 Connecting Containers with Aliases ***
+************************************************
+
+docker network create my_bridge_network
+
+docker run -d --name db --network my_bridge_network --network-alias database --env MYSQL_ROOT_PASSWORD=example mysql  
+
+docker run -d --name app --network my_bridge_network --network-alias frontend nginx
+
+docker run -it --network my_bridge_network alpine sh
+
+ping db
+
+ping database
+
+ping app
+
+ping frontend

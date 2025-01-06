@@ -79,3 +79,21 @@ docker run -d --name backend --network macvlan_network --ip 192.168.1.20 --env D
 docker network inspect macvlan_network
 
 docker network prune
+
+**********************************************
+*** 03_01 Creating a Custom Bridge Network ***
+**********************************************
+
+docker network create --help
+
+docker network create --subnet 192.168.1.0/24 custom_bridge
+
+docker run -d --name webserver --network custom_bridge nginx
+
+docker run -d --name dbserver --network custom_bridge --env MYSQL_ROOT_PASSWORD=example mysql
+
+docker run -d --name cache --network custom_bridge redis
+
+docker run -it --network custom_bridge alpine sh
+
+ping dbserver

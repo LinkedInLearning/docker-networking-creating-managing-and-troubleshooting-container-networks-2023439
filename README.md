@@ -1,6 +1,12 @@
 # Docker Networking: Creating, Managing, and Troubleshooting Container Networks
 This is the repository for the LinkedIn Learning course Docker Networking: Creating, Managing, and Troubleshooting Container Networks. The full course is available from [LinkedIn Learning][lil-course-url].
 
+![lil-thumbnail-url]
+
+## Course Description
+
+This course introduces the essentials of Docker networking for containerized applications. Instructor Shelley Benhoff explores Docker’s built-in network types and shows how to select the right one for various use cases. Through guided exercises and demonstrations, learn how to create, manage, and secure container networks to support scalable applications. The course covers key skills such as setting up inter-container communication and using Docker’s DNS for simplified connections. Troubleshooting scenarios are included to help diagnose and resolve common networking issues. By the end, you’ll have the knowledge to set up robust Docker networks that improve both security and scalability across your container environments.
+
 _See the readme file in the main branch for updated instructions and information._
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
@@ -40,5 +46,5 @@ Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learn
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
 [lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4D0DAQEK81kagnSqfg/learning-public-crop_675_1200/B4DZVdBE7iG8Ac-/0/1741022318584?e=2147483647&v=beta&t=zkcE-Ysb8KGf9XtvNEBSifD3Nw1Nyn0B43TSyytqoCo
 
